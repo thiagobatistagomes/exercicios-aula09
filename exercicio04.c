@@ -19,7 +19,11 @@ int main ()
         i++;
     }
 
-    printf("Quantidade letras da frase: %d\n", j);
+    while(j != -1)
+    {   
+        printf("%c", frase[j]);
+        j--;
+    }
 
     return 0;
 }
