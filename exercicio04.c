@@ -5,7 +5,6 @@
 int main ()
 {
     char frase[40];
-    char reverse[40];
     int i, j;
 
     printf("Digite uma frase: \n");
