@@ -6,19 +6,20 @@ int main ()
 {
     char frase[40];
     char reverse[40];
-    int i;
+    int i, j;
 
     printf("Digite uma frase: \n");
     scanf("%[^\n]", frase);
 
-    i = '\0';
-    while(i != -1)
+    i = 0;
+    j = 0;
+    while(frase[i] != '\0')
     {
-        reverse[i] = frase[i];
-        i--;
+        j++;
+        i++;
     }
 
-    printf("Frase de tras para frente: %s\n", reverse);
+    printf("Quantidade letras da frase: %d\n", j);
 
     return 0;
 }
