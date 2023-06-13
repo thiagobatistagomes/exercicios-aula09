@@ -10,7 +10,7 @@ a entrada conterá somente letras minúsculas e haverá ao menos um caractere �
 existe uma resposta.
 Exemplo de Entrada: aaxaaa  Saída: 6 (nesse caso, não é necessário apagar nenhuma letra, 
 pois a string de entrada já é harmônica. Portanto, seu tamanho final é 6 caracteres.)
-Exemplo de Entrada: babbba  Saída: 3 (nesse caso, é preciso apagar 4 letras b para tornar a 
+Exemplo de Entrada: babbbba  Saída: 3 (nesse caso, é preciso apagar 4 letras b para tornar a 
 string harmônica. Dessa forma, a string final fica com apenas 3 caracteres.)
 */
 
