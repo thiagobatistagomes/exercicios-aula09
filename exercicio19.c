@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*
     Desafio Fácil) Alice gosta muito da letra A. Alice classifica como string harmônica todas as strings 
@@ -16,9 +17,33 @@ string harmônica. Dessa forma, a string final fica com apenas 3 caracteres.)
 
 int main ()
 {
+    char entrada[100];
+    int contador = 0, i;
+    int jaeharmonica, seraharmonica;
 
+    printf("Digite a entrada: \n");
+    scanf("%[^\n]", entrada);
 
+    //verificando quantas vezes o caractere "a" aparece
+    for(i = 0; i < strlen(entrada); i++)
+    {
+        if(entrada[i] == 'a')
+        {
+            contador++;
+        }
+    }
 
+    jaeharmonica = strlen(entrada);
 
+    //se for mais da metade
+    if(contador > (strlen(entrada) / 2))
+    {
+        printf("%d", jaeharmonica);
+    } // se for menos da metade
+    else
+    {
+        seraharmonica = (strlen(entrada) / 2) - 1;
+        printf("%d", seraharmonica);
+    }
     return 0;
 }
