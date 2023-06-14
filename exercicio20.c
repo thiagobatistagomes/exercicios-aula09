@@ -16,7 +16,7 @@
 
 int main()
 {
-    char T[100000], S[100000], SLinhaaux[100000], SLinha[100000];
+    char T[100000], S[100000], Saux[100000], SLinhaaux[100000], SLinha[100000];
     int i, j, k;
 
     scanf("%[^\n]", T);
@@ -54,20 +54,31 @@ int main()
 
     for (i = 0; i < sLength; i++)
     {
-        S[i] = T[i];
+        Saux[i] = T[i];
     }
-    S[sLength] = '\0'; // Adicionando o terminador de string em S
+    Saux[sLength] = '\0'; // Adicionando o terminador de string em Saux
 
-    // Verificando se S' + S é igual a T
-    strcat(S, SLinha);
-    if (strcmp(S, T) == 0)
+    // adicionar elementos de Saux em S
+
+    for(i = 0; i <sLength; i++)
     {
-        printf("%s\n", S);
+        S[i] = Saux[i];
+    }
+
+    S[sLength] = '\0';
+
+
+    //verificar se existe resposta
+    strcat(Saux, SLinha);
+    if(strcmp(Saux, T) == 0)
+    {
+        printf("%s", S);
     }
     else
     {
-        printf("-1\n");
+        printf("-1");
     }
+    
 
     return 0;
 }

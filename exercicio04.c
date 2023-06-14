@@ -1,28 +1,24 @@
 #include <stdio.h>
+#include <string.h>
 
-// Faça um programa que leia uma frase e a imprima de trás para frente.
 
 int main ()
 {
-    char frase[40];
-    int i, j;
+    char frase[100];
+    int j;
 
-    printf("Digite uma frase: \n");
-    scanf("%[^\n]", frase);
+    scanf(" %[^\n]", frase);
 
-    i = 0;
-    j = 0;
-    while(frase[i] != '\0')
-    {
-        j++;
-        i++;
-    }
+    j = strlen(frase) - 1;
+  
 
-    while(j != -1)
+    while(j >= 0)
     {   
         printf("%c", frase[j]);
         j--;
     }
+    
+    printf("\n");
 
     return 0;
 }

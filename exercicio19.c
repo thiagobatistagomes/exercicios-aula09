@@ -15,34 +15,37 @@ Exemplo de Entrada: babbbba  Saída: 3 (nesse caso, é preciso apagar 4 letras b
 string harmônica. Dessa forma, a string final fica com apenas 3 caracteres.)
 */
 
-int main ()
+int main()
 {
     char entrada[100];
     int contador = 0, i;
     int jaeharmonica, seraharmonica;
 
-    printf("Digite a entrada: \n");
-    scanf("%[^\n]", entrada);
+    scanf("%s", entrada);
 
-    //verificando quantas vezes o caractere "a" aparece
-    for(i = 0; i < strlen(entrada); i++)
+    int len = strlen(entrada);
+
+
+    // Contando o número de ocorrências do caractere 'a'
+    for (i = 0; i < len; i++)
     {
-        if(entrada[i] == 'a')
+        if (entrada[i] == 'a')
         {
             contador++;
         }
     }
 
-    jaeharmonica = strlen(entrada);
+    jaeharmonica = len;
 
-    //se for mais da metade
-    if(contador > (strlen(entrada) / 2))
+    // Verificando se a string já é harmônica
+    if (contador > len / 2)
     {
         printf("%d", jaeharmonica);
-    } // se for menos da metade
+    }
     else
     {
-        seraharmonica = (strlen(entrada) / 2) - 1;
+        // Encontrando o maior tamanho possível para tornar a string harmônica
+        seraharmonica = contador * 2 - 1;
         printf("%d", seraharmonica);
     }
     return 0;
