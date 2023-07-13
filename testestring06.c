@@ -18,7 +18,7 @@ int main ()
 
     soma = num + num2;
 
-    printf("%d %d %d", num, num2, soma);
+    printf("%d + %d = %d", num, num2, soma);
 
 
 
